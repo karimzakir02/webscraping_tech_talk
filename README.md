@@ -1,2 +1,2 @@
-# webscraping_tech_talk
-Code for Recursion Tech Talk
+# Recursion Tech Talk: Webscraping
+This repo contains the code I used for my tech talk at Recursion Pharmaceuticals about webscraping.
