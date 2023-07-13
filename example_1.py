@@ -10,11 +10,11 @@ urllib3.disable_warnings()
 # Not necessary, my laptop doesn't have SSL verification, but it's not prod, so:
 ssl._create_default_https_context = ssl._create_unverified_context
 
-fav_race = "https://www.formula1.com/en/results.html/2022/races/1116/france/race-result.html"
-response = requests.get(fav_race, verify=False)
+standings = "https://www.formula1.com/en/results.html/2023/drivers.html"
+response = requests.get(standings, verify=False)
 
 # Two ways:
-direct_table = pd.read_html(fav_race)
+direct_table = pd.read_html(standings)
 
 # Or:
 # if response.status_code == 200:
