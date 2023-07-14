@@ -11,10 +11,11 @@ urllib3.disable_warnings()
 ssl._create_default_https_context = ssl._create_unverified_context
 
 standings = "https://www.formula1.com/en/results.html/2023/drivers.html"
+direct_table = pd.read_html(standings)
+
+# Second way of scraping:
 response = requests.get(standings, verify=False)
 
-# Two ways:
-direct_table = pd.read_html(standings)
 
 # Or:
 # if response.status_code == 200:
